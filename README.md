@@ -1,4 +1,4 @@
-##Project Name: React Mini Project(Under Progress)
+## Project Name: React Mini Project(Under Progress)
 
 This project is basically a dashboard that will have multiple mini projects to check and will be available from one link
 
