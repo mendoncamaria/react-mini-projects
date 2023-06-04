@@ -1,14 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   FaBars,
-  FaRegChartBar,
+  FaRegClock,
   FaTh,
   FaThList,
   FaUserAlt,
 } from 'react-icons/fa';
+import { TiWeatherCloudy } from "react-icons/ti";
+import '../App.css';
 import { NavLink } from 'react-router-dom';
 
-export default function Sidebar({children}) {
+export default function Sidebar({ children }) {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggle = () => setIsOpen(!isOpen);
+
   const menuItems = [
     {
       path: '/dashboard',
@@ -21,9 +27,14 @@ export default function Sidebar({children}) {
       icon: <FaUserAlt />,
     },
     {
-      path: '/analytics',
+      path: '/clock',
       name: 'Analytics',
-      icon: <FaRegChartBar />,
+      icon: <FaRegClock />,
+    },
+    {
+      path: '/weather',
+      name: 'Analytics',
+      icon: <TiWeatherCloudy />,
     },
     {
       path: '/products',
@@ -33,11 +44,28 @@ export default function Sidebar({children}) {
   ];
   return (
     <div className="container">
-      <div className="sidebar">
+      <div
+        style={{
+          width: isOpen ? '300px' : '50px',
+        }}
+        className="sidebar"
+      >
         <div className="top_section">
-          <h1 className="logo">Logo</h1>
-          <div className="bars">
-            <FaBars />
+          <h1
+            style={{
+              display: isOpen ? 'block' : 'none',
+            }}
+            className="logo"
+          >
+            Menu
+          </h1>
+          <div
+            style={{
+              marginLeft: isOpen ? '50px' : '0px',
+            }}
+            className="bars"
+          >
+            <FaBars onClick={toggle} />
           </div>
         </div>
         {menuItems.map((item, index) => (
@@ -48,7 +76,9 @@ export default function Sidebar({children}) {
             activeclassName="active"
           >
             <div className="icon">{item.icon}</div>
-            <div className="link_text">{item.name}</div>
+            <div style={{
+              display: isOpen ? 'block' : 'none',
+            }} className="link_text">{item.name}</div>
           </NavLink>
         ))}
       </div>
