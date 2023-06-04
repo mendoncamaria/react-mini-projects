@@ -9,7 +9,7 @@ import Products from './pages/Products';
 function App() {
   return (
     <div>
-      {/* <BrowserRouter>
+      <BrowserRouter>
         <Sidebar>
           <Routes>
             <Route path="/" element={<Dashboard />} />
@@ -19,10 +19,10 @@ function App() {
             <Route path="/products" element={<Products />} />
           </Routes>
         </Sidebar>
-      </BrowserRouter> */}
-      <h1>
+      </BrowserRouter>
+      {/* <h1>
         Under Progress......
-      </h1>
+      </h1> */}
     </div>
   );
 }
