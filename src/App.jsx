@@ -1,15 +1,15 @@
 import React from 'react';
-import Sidebar from './components/sidebar';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Dashboard from './pages/dashboard';
-import About from './pages/about';
-import Analytics from './pages/Analytics';
-import Products from './pages/Products';
+// import Sidebar from './components/sidebar';
+// import { BrowserRouter, Route, Routes } from 'react-router-dom';
+// import Dashboard from './pages/dashboard';
+// import About from './pages/about';
+// import Analytics from './pages/Analytics';
+// import Products from './pages/Products';
 
 function App() {
   return (
     <div>
-      <BrowserRouter>
+      {/* <BrowserRouter>
         <Sidebar>
           <Routes>
             <Route path="/" element={<Dashboard />} />
@@ -19,10 +19,10 @@ function App() {
             <Route path="/products" element={<Products />} />
           </Routes>
         </Sidebar>
-      </BrowserRouter>
-      {/* <h1>
+      </BrowserRouter> */}
+      <h1>
         Under Progress......
-      </h1> */}
+      </h1>
     </div>
   );
 }
