@@ -12,9 +12,9 @@ DB Details:
 DB used- Firebase CLI
 
 ## Additional npm packages used:
-firebase: `npm i firebase`
-react-router-dom: `npm i react-router-dom`
-react-icons: `npm i react-icons`
+firebase: `npm i firebase`        
+react-router-dom: `npm i react-router-dom`          
+react-icons: `npm i react-icons`        
 
 ### just run npm install, all packages will be installed
 
