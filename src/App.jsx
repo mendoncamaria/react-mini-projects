@@ -12,6 +12,7 @@ function App() {
       <BrowserRouter>
         <Sidebar>
           <Routes>
+            <Route path="/index.html" element={<Dashboard />} />
             <Route path="/" element={<Dashboard />} />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/about" element={<About />} />
