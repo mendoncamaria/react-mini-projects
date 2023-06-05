@@ -17,3 +17,5 @@ react-router-dom: `npm i react-router-dom`
 react-icons: `npm i react-icons`
 
 ### just run npm install, all packages will be installed
+
+URL: https://mendoncamaria-react-mini-projects.netlify.app/
