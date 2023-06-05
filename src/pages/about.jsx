@@ -2,7 +2,7 @@ import React from 'react'
 
 function About() {
   return (
-    <div>About</div>
+    <h1>Construction Under Progress</h1>
   )
 }
 
