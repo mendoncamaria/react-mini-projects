@@ -27,8 +27,13 @@ export default function Sidebar({ children }) {
       icon: <FaUserAlt />,
     },
     {
-      path: '/clock',
-      name: 'Analytics',
+      path: '/analogClock',
+      name: 'Analog Clock',
+      icon: <FaRegClock />,
+    },
+    {
+      path: '/digitalClock',
+      name: 'Digital Clock',
       icon: <FaRegClock />,
     },
     {
