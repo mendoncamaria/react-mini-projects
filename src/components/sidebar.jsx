@@ -1,52 +1,14 @@
 import React, { useState } from 'react';
-import {
-  FaBars,
-  FaRegClock,
-  FaTh,
-  FaThList,
-  FaUserAlt,
-} from 'react-icons/fa';
-import { TiWeatherCloudy } from "react-icons/ti";
+import { FaBars } from 'react-icons/fa';
 import '../App.css';
 import { NavLink } from 'react-router-dom';
+import { menuItems } from '../common/data';
 
 export default function Sidebar({ children }) {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
 
-  const menuItems = [
-    {
-      path: '/dashboard',
-      name: 'Dashboard',
-      icon: <FaTh />,
-    },
-    {
-      path: '/about',
-      name: 'About',
-      icon: <FaUserAlt />,
-    },
-    {
-      path: '/analogClock',
-      name: 'Analog Clock',
-      icon: <FaRegClock />,
-    },
-    {
-      path: '/digitalClock',
-      name: 'Digital Clock',
-      icon: <FaRegClock />,
-    },
-    {
-      path: '/weather',
-      name: 'Analytics',
-      icon: <TiWeatherCloudy />,
-    },
-    {
-      path: '/products',
-      name: 'Products',
-      icon: <FaThList />,
-    },
-  ];
   return (
     <div className="container">
       <div
@@ -81,9 +43,14 @@ export default function Sidebar({ children }) {
             activeclassName="active"
           >
             <div className="icon">{item.icon}</div>
-            <div style={{
-              display: isOpen ? 'block' : 'none',
-            }} className="link_text">{item.name}</div>
+            <div
+              style={{
+                display: isOpen ? 'block' : 'none',
+              }}
+              className="link_text"
+            >
+              {item.name}
+            </div>
           </NavLink>
         ))}
       </div>
