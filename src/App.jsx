@@ -1,6 +1,7 @@
 import React, { Suspense, lazy } from 'react';
 import Sidebar from './components/sidebar';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import StopWatch from './pages/clocks/stopwatch';
 
 const Dashboard = lazy(() => import('./pages/dashboard'));
 const About = lazy(() => import('./pages/about'));
@@ -26,6 +27,7 @@ function App() {
               <Route path="/about" element={<About />} />
               <Route path="/analogClock" element={<AnalogClock />} />
               <Route path="/digitalClock" element={<DigitalClock />} />
+              <Route path="/stopwatch" element={<StopWatch />} />
               <Route path="/weather" element={<Analytics />} />
               <Route path="/products" element={<Products />} />
             </Routes>

@@ -22,6 +22,11 @@ export const menuItems = [
     icon: <FaRegClock />,
   },
   {
+    path: '/stopwatch',
+    name: 'Stopwatch',
+    icon: <FaRegClock />,
+  },
+  {
     path: '/weather',
     name: 'Analytics',
     icon: <TiWeatherCloudy />,
