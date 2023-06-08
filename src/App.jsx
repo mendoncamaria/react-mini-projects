@@ -1,18 +1,7 @@
-import React, { Suspense, lazy } from 'react';
+import React, { Suspense } from 'react';
 import Sidebar from './components/sidebar';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import StopWatch from './pages/clocks/stopwatch';
-
-const Dashboard = lazy(() => import('./pages/dashboard'));
-const About = lazy(() => import('./pages/about'));
-const AnalogClock = lazy(() =>
-  import('./pages/clocks/analogClock/analogClock')
-);
-const DigitalClock = lazy(() =>
-  import('./pages/clocks/digitalClock/digitalClock')
-);
-const Analytics = lazy(() => import('./pages/Analytics'));
-const Products = lazy(() => import('./pages/Products'));
+import { routes } from './common/path';
 
 function App() {
   return (
@@ -20,17 +9,11 @@ function App() {
       <BrowserRouter>
         <Suspense fallback={<div>Loading...</div>}>
           <Sidebar>
-            <Routes>
-              <Route path="/index.html" element={<Dashboard />} />
-              <Route path="/" element={<Dashboard />} />
-              <Route path="/dashboard" element={<Dashboard />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/analogClock" element={<AnalogClock />} />
-              <Route path="/digitalClock" element={<DigitalClock />} />
-              <Route path="/stopwatch" element={<StopWatch />} />
-              <Route path="/weather" element={<Analytics />} />
-              <Route path="/products" element={<Products />} />
-            </Routes>
+          <Routes>
+          {routes.map((route, index) => (
+            <Route key={index} path={route.path} element={route.element} />
+          ))}
+        </Routes>
           </Sidebar>
         </Suspense>
       </BrowserRouter>
