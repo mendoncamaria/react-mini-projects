@@ -13,13 +13,13 @@ const Analytics = lazy(() => import('../pages/Analytics'));
 const Products = lazy(() => import('../pages/Products'));
 
 export const routes = [
-    { path: '/', element: <Dashboard /> },
-    { path: '/index.html', element: <Dashboard /> },
-    { path: '/dashboard', element: <Dashboard /> },
-    { path: '/about', element: <About /> },
-    { path: '/analogClock', element: <AnalogClock /> },
-    { path: '/digitalClock', element: <DigitalClock /> },
-    { path: '/stopwatch', element: <Stopwatch /> },
-    { path: '/weather', element: <Analytics /> },
-    { path: '/products', element: <Products /> }
-  ];
+  { path: '/', element: <Dashboard /> },
+  { path: '/index.html', element: <Dashboard /> },
+  { path: '/dashboard', element: <Dashboard /> },
+  { path: '/about', element: <About /> },
+  { path: '/analogClock', element: <AnalogClock /> },
+  { path: '/digitalClock', element: <DigitalClock /> },
+  { path: '/stopwatch', element: <Stopwatch /> },
+  { path: '/weather', element: <Analytics /> },
+  { path: '/products', element: <Products /> },
+];
