@@ -18,4 +18,6 @@ react-icons: `npm i react-icons`
 
 ### just run npm install, all packages will be installed
 
+loader styles from: https://loading.io/
+
 URL: https://mendoncamaria-react-mini-projects.netlify.app/
