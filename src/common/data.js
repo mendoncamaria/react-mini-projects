@@ -1,5 +1,6 @@
-import { FaRegClock, FaTh, FaThList, FaUserAlt } from 'react-icons/fa';
+import { FaRegClock, FaTh, FaUserAlt } from 'react-icons/fa';
 import { TiWeatherCloudy } from 'react-icons/ti';
+import { BsCurrencyExchange } from "react-icons/bs";
 export const menuItems = [
   {
     path: '/dashboard',
@@ -28,13 +29,13 @@ export const menuItems = [
   },
   {
     path: '/weather',
-    name: 'Analytics',
+    name: 'Weather',
     icon: <TiWeatherCloudy />,
   },
   {
     path: '/products',
-    name: 'Products',
-    icon: <FaThList />,
+    name: 'Currency Converter',
+    icon: <BsCurrencyExchange />,
   },
 ];
 
