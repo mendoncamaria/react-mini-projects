@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { FaBars } from 'react-icons/fa';
+import { AiOutlineClose } from 'react-icons/ai';
 import '../App.css';
 import { NavLink } from 'react-router-dom';
 import { menuItems } from '../common/data';
@@ -32,7 +33,7 @@ export default function Sidebar({ children }) {
             }}
             className="bars"
           >
-            <FaBars onClick={toggle} />
+            {isOpen ? <AiOutlineClose onClick={toggle} /> : <FaBars onClick={toggle} />}
           </div>
         </div>
         {menuItems.map((item, index) => (
