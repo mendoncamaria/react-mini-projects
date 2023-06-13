@@ -22,4 +22,5 @@ export const routes = [
   { path: '/stopwatch', element: <Stopwatch /> },
   { path: '/weather', element: <Analytics /> },
   { path: '/products', element: <Products /> },
+  { path: '/todo-list', element: <Products /> },
 ];
