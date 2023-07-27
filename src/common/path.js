@@ -1,5 +1,7 @@
 import { lazy } from 'react';
 
+const Textcase = lazy(() => import('../pages/textcase converter/about'));
+const LoginPage = lazy(() => import('../pages/login/loginPage'));
 const Dashboard = lazy(() => import('../pages/dashboard'));
 const About = lazy(() => import('../pages/about'));
 const AnalogClock = lazy(() =>
@@ -20,7 +22,8 @@ export const routes = [
   { path: '/analogClock', element: <AnalogClock /> },
   { path: '/digitalClock', element: <DigitalClock /> },
   { path: '/stopwatch', element: <Stopwatch /> },
-  { path: '/weather', element: <Analytics /> },
-  { path: '/products', element: <Products /> },
+  { path: '/weather', element: <LoginPage /> },
+  { path: '/products', element: <Textcase /> },
   { path: '/todo-list', element: <Products /> },
+  { path: '/analytics', element: <Analytics /> },
 ];
