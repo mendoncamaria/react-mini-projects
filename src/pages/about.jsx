@@ -1,9 +1,9 @@
 import React from 'react'
 
-function About() {
+function Analytics() {
   return (
     <h1>Construction Under Progress</h1>
   )
 }
 
-export default About
+export default Analytics
